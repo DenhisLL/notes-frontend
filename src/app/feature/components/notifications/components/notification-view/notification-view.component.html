@@ -1,0 +1,8 @@
+<div class="meta">
+  <typography variant="subtitle" class="reminderDate" [isFixed]="true">
+    {{selectedNotification?.reminderDate | date: "dd.MM.yyyyг., в HH.mm"}}
+  </typography>
+  <typography variant="h3">
+    {{selectedNotification?.notificationText}}
+  </typography>
+</div>

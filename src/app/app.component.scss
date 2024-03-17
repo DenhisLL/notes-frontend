@@ -1,0 +1,17 @@
+:host {
+  tui-root {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+
+  .main-content {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 8px;
+  }
+}

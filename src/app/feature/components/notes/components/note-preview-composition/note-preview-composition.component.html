@@ -1,0 +1,13 @@
+<tui-scrollbar class="box">
+  <div class="meta">
+    <app-note-preview
+      *ngFor="let note of notes"
+      [title]="note.title"
+      [creationDate]="note.creationDate"
+      [noticeText]="note.noticeText"
+      [tags]="note.tags"
+      [isSelected]="selectedNote?.id === note.id"
+      (click)="selectedNoteId.emit(note.id)"
+    />
+  </div>
+</tui-scrollbar>

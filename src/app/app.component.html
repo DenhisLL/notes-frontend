@@ -1,0 +1,9 @@
+<tui-root>
+  <div class="main-content">
+    <app-header></app-header>
+    <app-notes-main *ngIf="(selectedTabName$ | async) === tabName.notes" />
+    <app-notifications
+      *ngIf="(selectedTabName$ | async) === tabName.notifications"
+    />
+  </div>
+</tui-root>

@@ -1,0 +1,21 @@
+<ng-container *tuiLet="notes$ | async as notes">
+  <app-note-preview-composition
+    [notes]="notes"
+    [selectedNote]="selectedNote$ | async"
+    (selectedNoteId)="onSelectNote($event)"
+  />
+
+  <ng-container *tuiLet="editMode$ | async as editMode">
+    <ng-container *ngIf="(!editMode && notes?.length) || editMode; else empty">
+      <app-note-view
+        *ngIf="!editMode && notes?.length"
+        [selectedNote]="selectedNote$ | async"
+      />
+      <app-note-create *ngIf="editMode" [notes]="notes" />
+    </ng-container>
+  </ng-container>
+
+  <ng-template #empty>
+    <app-dummy-view />
+  </ng-template>
+</ng-container>

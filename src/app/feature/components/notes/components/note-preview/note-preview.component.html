@@ -1,0 +1,10 @@
+<div class="meta" [ngClass]="{selected: isSelected}">
+  <typography bold [isFixed]="true">{{ title }}</typography>
+  <div class="subtitle">
+    <typography>{{ creationDate | date : "dd.MM.yyyy" }}</typography>
+    <typography variant="caption" class="noticeText" [isFixed]="true">
+      {{ noticeText }}
+    </typography>
+  </div>
+  <app-tags-composition [tags]="tags" [isPreview]="true" />
+</div>

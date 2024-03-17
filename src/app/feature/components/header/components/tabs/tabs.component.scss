@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--d1);
+  width: 200px;
+  border-radius: 5px;
+  height: 40px;
+  user-select: none;
+
+  .tabs {
+    display: flex;
+    gap: 6px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid var(--d1);
+    background-color: var(--d1);
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--d7);
+    }
+  }
+
+  .active {
+    border: 1px solid var(--accent);
+  }
+}

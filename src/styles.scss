@@ -1,0 +1,5 @@
+@import './styles/css-vars';
+
+body[data-tui-theme='taiga'] {
+  background: var(--d15) !important;
+}

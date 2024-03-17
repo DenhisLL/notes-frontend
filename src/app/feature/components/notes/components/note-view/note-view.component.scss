@@ -1,0 +1,15 @@
+:host {
+  .meta {
+    background-color: var(--d1);
+    height: 480px;
+    width: 480px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .creationDate {
+    color: var(--d50);
+    display: flex;
+    justify-content: center;
+  }
+}

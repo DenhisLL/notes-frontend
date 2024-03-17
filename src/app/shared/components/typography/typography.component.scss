@@ -1,0 +1,140 @@
+:host {
+  color: var(--dl, #202020);
+  font-weight: 400;
+
+  &[bold] {
+    font-weight: bold;
+  }
+
+  h1 {
+    color: inherit;
+    /* H1 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 56px; /* 116.667% */
+    letter-spacing: -1.44px;
+
+    &.fixed {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  h2 {
+    color: inherit;
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* H2 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 128.571% */
+
+    &.fixed {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  h3 {
+    color: inherit;
+    /* H3 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 116.667% */
+
+    &.fixed {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  h4 {
+    color: inherit;
+    /* H4 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.08px;
+
+    &.fixed {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  h5 {
+    color: inherit;
+    /* H5 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    letter-spacing: -0.064px;
+
+    &.fixed {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  p {
+    color: inherit;
+    /* T4 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: inherit;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.051px;
+
+    &.caption {
+      color: inherit;
+      /* Caption */
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: inherit;
+      line-height: 18px;
+
+      &.fixed {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    &.subcaption {
+      color: inherit;
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: inherit;
+      line-height: 14px; /* 116.667% */
+
+      &.fixed {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    &.fixed {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

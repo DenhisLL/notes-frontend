@@ -1,0 +1,9 @@
+<div class="meta">
+  <typography variant="subtitle" class="creationDate" [isFixed]="true">
+    {{selectedNote?.creationDate | date : "dd.MM.yyyyг."}}
+  </typography>
+  <typography variant="h3" [isFixed]="true" (click)="onEdit()">
+    {{selectedNote?.title}}
+  </typography>
+  <typography (click)="onEdit()">{{selectedNote?.noticeText}}</typography>
+</div>

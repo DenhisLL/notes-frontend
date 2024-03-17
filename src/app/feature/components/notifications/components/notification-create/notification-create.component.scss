@@ -1,0 +1,19 @@
+:host {
+  background-color: var(--d1);
+  height: 480px;
+  width: 480px;
+  border-radius: 5px;
+  padding: 10px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

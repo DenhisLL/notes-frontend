@@ -1,0 +1,26 @@
+<ng-container *tuiLet="notifications$ | async as notifications">
+  <app-notification-preview-composition
+    [notifications]="notifications"
+    [selectedNotification]="selectedNotification$ | async"
+    (selectedNotificationId)="onSelectNotification($event)"
+  />
+
+  <ng-container *tuiLet="editMode$ | async as editMode">
+    <ng-container
+      *ngIf="(!editMode && notifications?.length) || editMode; else empty"
+    >
+      <app-notification-view
+        *ngIf="!(editMode$ | async) && (notifications$ | async)"
+        [selectedNotification]="selectedNotification$ | async"
+      />
+      <app-notification-create
+        *ngIf="(editMode$ | async)"
+        [notifications]="notifications$ | async"
+      />
+    </ng-container>
+  </ng-container>
+
+  <ng-template #empty>
+    <app-dummy-view />
+  </ng-template>
+</ng-container>

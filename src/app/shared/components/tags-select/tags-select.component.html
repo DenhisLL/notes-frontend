@@ -1,0 +1,37 @@
+<div *tuiLet="addTagState$ | async as state" class="meta">
+  <div *ngIf="!state" class="select">
+    <tui-combo-box
+      *tuiLet="tags$ | async as items"
+      tuiTextfieldSize="l"
+      [formControl]="tagControl"
+      (searchChange)="onSearchValueChange($event, searchTags$)"
+    >
+      Выберите теги
+      <input tuiTextfield placeholder="Начните вводить" />
+      <tui-data-list-wrapper
+        *tuiDataList
+        [items]="items"
+        [itemContent]="content"
+      ></tui-data-list-wrapper>
+    </tui-combo-box>
+
+    <ng-template #content let-data>
+      <span>{{data}}</span>
+    </ng-template>
+  </div>
+
+  <div *ngIf="state" class="addTag">
+    <tui-input [formControl]="newTag">
+      Введите название
+      <input maxlength="20" tuiTextfield />
+    </tui-input>
+
+    <button [disabled]="newTag.invalid" (click)="addNewTag()">
+      <tui-svg src="tuiIconCheckLarge"></tui-svg>
+    </button>
+  </div>
+
+  <button [ngClass]="{active: state}" (click)="onToggleState()">
+    <tui-svg src="tuiIconPlusLarge"></tui-svg>
+  </button>
+</div>

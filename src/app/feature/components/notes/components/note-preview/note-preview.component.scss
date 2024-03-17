@@ -1,0 +1,42 @@
+:host {
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--d15);
+    background-color: var(--d1);
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transition: 200ms ease-in-out;
+      background-color: var(--d7);
+    }
+  }
+
+  .selected {
+    border: 1px solid var(--accent);
+  }
+
+  .subtitle {
+    display: flex;
+    gap: 4px;
+    align-items: baseline;
+
+    .noticeText {
+      max-width: 110px;
+      color: var(--d50);
+    }
+  }
+
+  .tagsComposition {
+    display: flex;
+    gap: 4px;
+
+    typography {
+      color: var(--d50);
+    }
+  }
+}

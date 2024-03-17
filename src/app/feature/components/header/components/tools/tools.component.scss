@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 500px;
+  border-radius: 5px;
+  background-color: var(--d1);
+
+  .tools {
+    display: flex;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  button {
+    background-color: transparent;
+    border: transparent;
+    padding: 0;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      tui-svg {
+        color: var(--accent);
+      }
+    }
+
+    &:disabled {
+      opacity: 0.2;
+      tui-svg {
+        color: var(--d60);
+      }
+    }
+
+    &.active {
+      transform: rotate(45deg);
+    }
+  }
+}

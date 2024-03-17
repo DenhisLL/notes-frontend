@@ -1,0 +1,44 @@
+<ng-container [ngSwitch]="variant">
+  <ng-container *ngSwitchCase="'h1'">
+    <h1 [ngClass]="{fixed: isFixed}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h1>
+  </ng-container>
+  <ng-container *ngSwitchCase="'h2'">
+    <h2 [ngClass]="{fixed: isFixed}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h2>
+  </ng-container>
+  <ng-container *ngSwitchCase="'h3'">
+    <h3 [ngClass]="{fixed: isFixed}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h3>
+  </ng-container>
+  <ng-container *ngSwitchCase="'h4'">
+    <h4 [ngClass]="{fixed: isFixed}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h4>
+  </ng-container>
+  <ng-container *ngSwitchCase="'h5'">
+    <h5 [ngClass]="{fixed: isFixed}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h5>
+  </ng-container>
+  <ng-container *ngSwitchCase="'caption'">
+    <p class="caption" [ngClass]="{fixed: isFixed}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </p>
+  </ng-container>
+  <ng-container *ngSwitchCase="'subcaption'">
+    <p class="subcaption" [ngClass]="{fixed: isFixed}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </p>
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <p [ngClass]="{fixed: isFixed}"><ng-container [ngTemplateOutlet]="content"></ng-container></p>
+  </ng-container>
+</ng-container>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

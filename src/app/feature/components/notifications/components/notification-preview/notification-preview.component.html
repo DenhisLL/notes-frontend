@@ -1,0 +1,14 @@
+<div class="meta" [ngClass]="{selected: isSelected}">
+  <div class="subtitle">
+    <typography>
+      {{ reminderDate | date : "HH:mm, EEEE" : '': 'ru' }}
+    </typography>
+    <typography>
+      {{ reminderDate | date : "dd MMMM yyyy" : '': 'ru' }}
+    </typography>
+    <typography variant="caption" class="noticeText" [isFixed]="true">
+      {{ notificationText }}
+    </typography>
+  </div>
+  <app-tags-composition [tags]="tags" [isPreview]="true" />
+</div>

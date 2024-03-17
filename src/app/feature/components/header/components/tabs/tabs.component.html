@@ -1,0 +1,14 @@
+<div class="tabs">
+  <button
+    [ngClass]="{active: (selectedTabName$ | async) === tabName.notes}"
+    (click)="onSelectNotesType(tabName.notes)"
+  >
+    <typography variant="h5" bold>{{tabName.notes}}</typography>
+  </button>
+  <button
+    [ngClass]="{active: (selectedTabName$ | async) === tabName.notifications}"
+    (click)="onSelectNotesType(tabName.notifications)"
+  >
+    <typography variant="h5" bold>{{tabName.notifications}}</typography>
+  </button>
+</div>

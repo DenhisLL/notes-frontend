@@ -1,0 +1,22 @@
+<form class="form" [formGroup]="form">
+  <tui-input-date-time [formControl]="dateControl">
+    Выберите дату и время
+  </tui-input-date-time>
+
+  <tui-textarea
+    class="noticeText"
+    [formControl]="form.controls.notificationText"
+    [tuiTextfieldCleaner]="true"
+    [tuiTextfieldLabelOutside]="true"
+  >
+    Напоминание
+  </tui-textarea>
+
+  <div class="tags">
+    <app-tags-select [control]="form.controls.tags" />
+    <app-tags-composition
+      [tags]="form.controls.tags.value"
+      (removedTagName)="onRemoveTagByName($event)"
+    />
+  </div>
+</form>

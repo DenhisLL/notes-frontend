@@ -1,0 +1,12 @@
+<tui-scrollbar [hidden]="true">
+  <div *ngIf="tags" class="composition">
+    <div *ngFor="let tag of tags" class="tags">
+      <typography variant="caption">{{ tag }}</typography>
+      <tui-svg
+        *ngIf="(editMode$ | async) && !isPreview"
+        src="tuiIconClose"
+        (click)="onRemove(tag)"
+      ></tui-svg>
+    </div>
+  </div>
+</tui-scrollbar>

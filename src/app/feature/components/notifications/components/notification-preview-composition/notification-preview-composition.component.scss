@@ -1,0 +1,14 @@
+:host {
+  user-select: none;
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .box {
+    width: 200px;
+    height: 500px;
+  }
+}

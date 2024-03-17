@@ -1,0 +1,44 @@
+:host {
+  .meta {
+    display: flex;
+    gap: 6px;
+  }
+
+  .select {
+    width: 500px;
+  }
+
+  .addTag {
+    display: flex;
+    gap: 6px;
+  }
+
+  tui-input {
+    width: 420px;
+  }
+
+  button {
+    background-color: transparent;
+    border: transparent;
+    padding: 0;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      tui-svg {
+        color: var(--accent);
+      }
+    }
+
+    &:disabled {
+      opacity: 0.2;
+      tui-svg {
+        color: var(--d60);
+      }
+    }
+
+    &.active {
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+:host {
+  .composition {
+    display: flex;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  .tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 60px;
+    border: 1px solid var(--accent);
+  }
+
+  typography {
+    user-select: none;
+    color: var(--d50);
+  }
+
+  tui-svg {
+    cursor: pointer;
+    color: var(--d50);
+  }
+}

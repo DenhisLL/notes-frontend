@@ -1,0 +1,17 @@
+<div class="tools">
+  <button [ngClass]="{active: (isCreateState$ | async)}" (click)="onCreate()">
+    <tui-svg src="tuiIconPlusLarge" />
+  </button>
+  <button
+    [disabled]="!(selectedNote$ | async) && !(selectedNotification$ | async)"
+    (click)="onEdit()"
+  >
+    <tui-svg src="tuiIconEdit2" />
+  </button>
+  <button
+    [disabled]="!(selectedNote$| async) && !(selectedNotification$ | async)"
+    (click)="onDelete()"
+  >
+    <tui-svg src="tuiIconTrash2" />
+  </button>
+</div>

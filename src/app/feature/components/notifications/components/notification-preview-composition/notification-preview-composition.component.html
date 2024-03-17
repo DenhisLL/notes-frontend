@@ -1,0 +1,12 @@
+<tui-scrollbar class="box">
+  <div *ngIf="notifications?.length" class="meta">
+    <app-notification-preview
+      *ngFor="let notification of notifications"
+      [notificationText]="notification.notificationText"
+      [reminderDate]="notification.reminderDate"
+      [tags]="notification.tags"
+      [isSelected]="selectedNotification?.id === notification.id"
+      (click)="selectedNotificationId.emit(notification.id)"
+    />
+  </div>
+</tui-scrollbar>

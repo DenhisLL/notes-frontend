@@ -1,0 +1,26 @@
+<form class="form" [formGroup]="form">
+  <tui-textarea
+    class="title"
+    [formControl]="form.controls.title"
+    [tuiTextfieldSize]="'l'"
+    [tuiTextfieldLabelOutside]="true"
+  >
+    Введите название
+  </tui-textarea>
+  <tui-textarea
+    class="noticeText"
+    [tuiTextfieldSize]="'l'"
+    [formControl]="form.controls.noticeText"
+    [tuiTextfieldLabelOutside]="true"
+  >
+    Заметка
+  </tui-textarea>
+
+  <div class="tags">
+    <app-tags-select [control]="form.controls.tags" />
+    <app-tags-composition
+      [tags]="form.controls.tags.value"
+      (removedTagName)="onRemoveTagByName($event)"
+    />
+  </div>
+</form>
